@@ -40,16 +40,16 @@
     .page {
       width: 540px;
       height: 720px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(250,248,243,0.98) 100%);
-      border: 1px solid rgba(224, 219, 208, 0.9);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
       padding: 50px 40px;
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(250,248,243,0.98) 100%);
+      border: 1px solid rgba(224, 219, 208, 0.9);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
     }
 
     .page::before {
@@ -88,8 +88,16 @@
       color: var(--accent);
     }
 
-    .lead {
+    h2,
+    h3,
+    p,
+    ul,
+    ol,
+    li {
       position: relative;
+    }
+
+    .lead {
       margin: 0;
       color: var(--muted);
       font-size: 0.98rem;
@@ -97,7 +105,6 @@
     }
 
     .content-card {
-      position: relative;
       background: rgba(255, 255, 255, 0.88);
       border: 1px solid var(--border);
       border-left: 4px solid var(--accent2);
@@ -128,7 +135,6 @@
     }
 
     .highlight-box {
-      position: relative;
       border-radius: 16px;
       padding: 0.95rem 1rem;
       background: var(--accent);
@@ -138,12 +144,118 @@
     }
 
     .warning-box {
-      position: relative;
       border-radius: 16px;
       padding: 0.95rem 1rem;
       background: rgba(242, 201, 76, 0.24);
       border: 1px solid rgba(242, 201, 76, 0.55);
       color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .insight-grid,
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .insight-chip,
+    .comparison-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+    }
+
+    .insight-chip strong,
+    .comparison-card strong,
+    .visual-placeholder strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent2);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .insight-chip p,
+    .comparison-card p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 10px;
+    }
+
+    .timeline-step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border);
+    }
+
+    .timeline-step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--accent2);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .timeline-step p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .visual-placeholder {
+      min-height: 190px;
+      border-radius: 18px;
+      border: 1px dashed rgba(45, 106, 143, 0.35);
+      background:
+        linear-gradient(135deg, rgba(45, 106, 143, 0.08), rgba(232, 93, 38, 0.05)),
+        rgba(255, 255, 255, 0.72);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 18px;
+      color: #8f8a83;
+    }
+
+    .visual-placeholder p {
+      margin: 0;
+      font-size: 0.84rem;
       line-height: 1.6;
     }
 
@@ -154,25 +266,6 @@
       border-radius: 6px;
       font-family: "JetBrains Mono", "Cascadia Code", monospace;
       font-size: 0.82rem;
-    }
-
-    .visual-placeholder {
-      position: relative;
-      flex: 1;
-      min-height: 200px;
-      border-radius: 18px;
-      border: 1px dashed rgba(45, 106, 143, 0.35);
-      background:
-        linear-gradient(135deg, rgba(45, 106, 143, 0.06), rgba(232, 93, 38, 0.04)),
-        rgba(255, 255, 255, 0.72);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #a8a39c;
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
     }
 
     .page-footer {
@@ -190,21 +283,108 @@
   <main class="pages">
     <section class="page">
       <div class="part-tag">Part 01</div>
-      <h1>把 <span>Markdown</span> 变成干货卡片</h1>
-      <p class="lead">将这里替换为从 Markdown 提炼出的导语、目标或核心判断，保持语言紧凑、可截图、可传播。</p>
+      <h1>先讲清 <span>核心判断</span></h1>
+      <p class="lead">第一页负责把主题、适用场景和读者收益讲明白，不放截图位，直接用信息块建立节奏。</p>
 
       <article class="content-card">
-        <h2>核心信息</h2>
+        <h2>这一页该承载什么</h2>
         <ul>
-          <li>将要点拆成短句，避免大段原文照搬。</li>
-          <li>将路径、命令、按钮名包进 <code>&lt;code&gt;</code>。</li>
-          <li>每页保留可替换截图区，方便后续插入实机演示。</li>
+          <li>一句话主题判断。</li>
+          <li>2 到 4 条提炼后的重点。</li>
+          <li>让读者继续往下翻的价值感。</li>
         </ul>
       </article>
 
-      <div class="highlight-box">把最重要的结论、收益或行动建议放进高亮区。</div>
-      <div class="visual-placeholder">SCREENSHOT / DEMO / WORKFLOW</div>
-      <div class="page-footer">01 / 01</div>
+      <div class="highlight-box">概览页要更像结论页的开场，而不是平铺直叙的文档摘要。</div>
+
+      <div class="insight-grid">
+        <div class="insight-chip">
+          <strong>Overview</strong>
+          <p>用概览、结论、收益点快速建立传播性。</p>
+        </div>
+        <div class="insight-chip">
+          <strong>Rhythm</strong>
+          <p>模块之间要有轻重变化，但不要出现无意义留白。</p>
+        </div>
+      </div>
+
+      <div class="page-footer">01 / 04</div>
+    </section>
+
+    <section class="page">
+      <div class="part-tag">Part 02</div>
+      <h1>拆开看 <span>操作过程</span></h1>
+      <p class="lead">第二页优先承接方法、步骤或流程，并固定预留一块截图空间，方便插入操作演示。</p>
+
+      <div class="timeline">
+        <div class="timeline-step">
+          <span>1</span>
+          <p>先讲前提、入口或准备动作，把读者带进场景。</p>
+        </div>
+        <div class="timeline-step">
+          <span>2</span>
+          <p>再讲关键动作、判断条件或分支差异，避免步骤只有标题没有解释。</p>
+        </div>
+      </div>
+
+      <div class="visual-placeholder">
+        <strong>操作截图</strong>
+        <p>这里预留给实际界面、关键步骤、路径演示或工作流截图。</p>
+      </div>
+
+      <div class="page-footer">02 / 04</div>
+    </section>
+
+    <section class="page">
+      <div class="part-tag">Part 03</div>
+      <h1>顺手避开 <span>常见问题</span></h1>
+      <p class="lead">第三页适合讲误区、坑点、对比关系或判断边界，不放截图位，重点是让信息结构发生变化。</p>
+
+      <div class="warning-box">这一页适合把“最容易做错的地方”讲透，让读者觉得这份内容有经验含量。</div>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <strong>Do</strong>
+          <p>给出推荐做法、适用条件和理由。</p>
+        </div>
+        <div class="comparison-card">
+          <strong>Don't</strong>
+          <p>指出常见误解、错误路径或容易踩坑的动作。</p>
+        </div>
+      </div>
+
+      <ul class="checklist">
+        <li>把抽象原则改写成用户能直接执行的提醒。</li>
+        <li>尽量用对比、清单或边界判断替代重复叙述。</li>
+      </ul>
+
+      <div class="page-footer">03 / 04</div>
+    </section>
+
+    <section class="page">
+      <div class="part-tag">Part 04</div>
+      <h1>最后落到 <span>行动建议</span></h1>
+      <p class="lead">第四页负责总结、复盘或结果展示，并预留第二个截图位，适合放效果演示、前后对比或成品画面。</p>
+
+      <div class="highlight-box">收尾页不要只重复前文，要把“现在该怎么做”明确交给读者。</div>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <strong>Takeaway</strong>
+          <p>提炼成一句可传播的结论或判断。</p>
+        </div>
+        <div class="comparison-card">
+          <strong>Action</strong>
+          <p>给出下一步动作、检查项或复用建议。</p>
+        </div>
+      </div>
+
+      <div class="visual-placeholder">
+        <strong>效果演示</strong>
+        <p>这里预留给结果截图、前后对比、案例展示或最终成品效果。</p>
+      </div>
+
+      <div class="page-footer">04 / 04</div>
     </section>
   </main>
 </body>

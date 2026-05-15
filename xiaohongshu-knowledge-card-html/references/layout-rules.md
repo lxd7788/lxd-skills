@@ -21,18 +21,21 @@
 - Apply generous outer padding and visible separation between pages.
 - Add a `part-tag` at the top of every page.
 - Place a `page-footer` at the lower-right corner.
+- Keep the overall palette and editorial card language consistent across all pages, but vary the internal module composition by page role.
 
 ## Density
 
-- Do not leave large empty blank areas except for the intentional visual placeholder.
+- Do not leave large empty blank areas.
 - Keep 2-4 compact content modules per page when possible.
 - Favor concise lines and clear hierarchy over long paragraphs.
 
-## Visual Placeholder
+## Visual Modules
 
-- Keep one `div.visual-placeholder` on each page unless the user explicitly says otherwise.
-- Reserve roughly 30%-40% of the page height for it.
-- Use clear placeholder labels such as `SCREENSHOT / DEMO / WORKFLOW`.
+- Do not force a screenshot or demo placeholder onto every page.
+- Reserve screenshot-ready space on page 2 and page 4 only by default.
+- Keep each screenshot-ready area integrated into the layout rather than floating as an isolated empty block.
+- When a visual area is genuinely useful, make it content-led: use process diagrams, metric panels, comparison grids, or a clearly requested image slot.
+- Prefer fully designed information blocks over large generic empty regions.
 
 ## Emphasis
 
@@ -42,7 +45,13 @@
 
 ## Suggested Page Patterns
 
-1. Overview page: title, summary cards, placeholder.
-2. Steps page: ordered list or stacked cards, placeholder.
-3. Pitfalls page: warning card, checklist, placeholder.
-4. Summary page: condensed takeaways, action list, placeholder.
+1. Overview page: title, summary cards, key takeaway, no screenshot slot.
+2. Steps or method page: process timeline plus one screenshot-ready module.
+3. Pitfalls or comparison page: warning card, checklist, or two-column comparison, no screenshot slot.
+4. Summary or action page: condensed takeaways plus one screenshot-ready module.
+
+## Screenshot Slot Rules
+
+- Use `div.visual-placeholder` only on page 2 and page 4 unless the user explicitly asks for more.
+- Size the slot to roughly 25%-35% of the page height so the page still feels content-led.
+- Label the slot according to context, for example `操作截图`, `前后对比`, or `效果演示`, instead of always using the same English text.
