@@ -31,10 +31,9 @@
 
 ## Visual Modules
 
-- Do not force a screenshot or demo placeholder onto every page.
-- Reserve screenshot-ready space on page 2 and page 4 only by default.
-- Keep each screenshot-ready area integrated into the layout rather than floating as an isolated empty block.
-- When a visual area is genuinely useful, make it content-led: use process diagrams, metric panels, comparison grids, or a clearly requested image slot.
+- Every page should feel complete on its own and be directly usable as a final screenshot.
+- Do not use `div.visual-placeholder` or any generic reserved image area by default.
+- When a visual area is useful, make it content-led: use process diagrams, metric panels, comparison grids, structured quotes, or result summaries.
 - Prefer fully designed information blocks over large generic empty regions.
 
 ## Emphasis
@@ -45,13 +44,7 @@
 
 ## Suggested Page Patterns
 
-1. Overview page: title, summary cards, key takeaway, no screenshot slot.
-2. Steps or method page: process timeline plus one screenshot-ready module.
-3. Pitfalls or comparison page: warning card, checklist, or two-column comparison, no screenshot slot.
-4. Summary or action page: condensed takeaways plus one screenshot-ready module.
-
-## Screenshot Slot Rules
-
-- Use `div.visual-placeholder` only on page 2 and page 4 unless the user explicitly asks for more.
-- Size the slot to roughly 25%-35% of the page height so the page still feels content-led.
-- Label the slot according to context, for example `操作截图`, `前后对比`, or `效果演示`, instead of always using the same English text.
+1. Overview page: title, summary cards, key takeaway.
+2. Steps or method page: process timeline, ordered cards, or compact framework breakdown.
+3. Pitfalls or comparison page: warning card, checklist, or two-column comparison.
+4. Summary or action page: condensed takeaways, action list, or result grid.

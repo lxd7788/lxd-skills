@@ -62,8 +62,20 @@
       pointer-events: none;
     }
 
-    .part-tag {
+    .part-tag,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    ol,
+    li,
+    div,
+    article {
       position: relative;
+    }
+
+    .part-tag {
       align-self: flex-start;
       padding: 4px 12px;
       border-radius: 999px;
@@ -76,7 +88,6 @@
     }
 
     h1 {
-      position: relative;
       margin: 8px 0 4px;
       font-family: "Noto Serif SC", "Songti SC", serif;
       font-size: 2.15rem;
@@ -88,15 +99,6 @@
       color: var(--accent);
     }
 
-    h2,
-    h3,
-    p,
-    ul,
-    ol,
-    li {
-      position: relative;
-    }
-
     .lead {
       margin: 0;
       color: var(--muted);
@@ -104,11 +106,18 @@
       line-height: 1.65;
     }
 
-    .content-card {
+    .content-card,
+    .mini-card,
+    .comparison-card,
+    .timeline-step,
+    .check-item {
       background: rgba(255, 255, 255, 0.88);
       border: 1px solid var(--border);
-      border-left: 4px solid var(--accent2);
       border-radius: 16px;
+    }
+
+    .content-card {
+      border-left: 4px solid var(--accent2);
       padding: 1rem 1rem 0.95rem;
     }
 
@@ -120,10 +129,14 @@
     }
 
     .content-card p,
-    .content-card li {
+    .content-card li,
+    .mini-card p,
+    .comparison-card p,
+    .timeline-step p,
+    .check-item p {
       margin: 0;
-      font-size: 0.92rem;
-      line-height: 1.7;
+      font-size: 0.9rem;
+      line-height: 1.65;
     }
 
     .content-card ul,
@@ -153,36 +166,26 @@
     }
 
     .insight-grid,
-    .comparison-grid {
+    .comparison-grid,
+    .result-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
     }
 
-    .insight-chip,
+    .mini-card,
     .comparison-card {
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 14px 14px 12px;
+      padding: 14px;
     }
 
-    .insight-chip strong,
-    .comparison-card strong,
-    .visual-placeholder strong {
+    .mini-card strong,
+    .comparison-card strong {
       display: block;
       margin-bottom: 6px;
       color: var(--accent2);
       font-size: 0.78rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-    }
-
-    .insight-chip p,
-    .comparison-card p {
-      margin: 0;
-      font-size: 0.88rem;
-      line-height: 1.6;
     }
 
     .timeline {
@@ -196,9 +199,6 @@
       gap: 10px;
       align-items: start;
       padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid var(--border);
     }
 
     .timeline-step span {
@@ -214,12 +214,6 @@
       font-size: 0.88rem;
     }
 
-    .timeline-step p {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
     .checklist {
       display: grid;
       gap: 10px;
@@ -228,35 +222,8 @@
       list-style: none;
     }
 
-    .checklist li {
+    .check-item {
       padding: 12px 14px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.86);
-      border: 1px solid var(--border);
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
-    .visual-placeholder {
-      min-height: 190px;
-      border-radius: 18px;
-      border: 1px dashed rgba(45, 106, 143, 0.35);
-      background:
-        linear-gradient(135deg, rgba(45, 106, 143, 0.08), rgba(232, 93, 38, 0.05)),
-        rgba(255, 255, 255, 0.72);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 18px;
-      color: #8f8a83;
-    }
-
-    .visual-placeholder p {
-      margin: 0;
-      font-size: 0.84rem;
-      line-height: 1.6;
     }
 
     code {
@@ -284,7 +251,7 @@
     <section class="page">
       <div class="part-tag">Part 01</div>
       <h1>先讲清 <span>核心判断</span></h1>
-      <p class="lead">第一页负责把主题、适用场景和读者收益讲明白，不放截图位，直接用信息块建立节奏。</p>
+      <p class="lead">第一页负责把主题、适用场景和读者收益讲明白，直接用信息块建立节奏，不依赖任何留白区域。</p>
 
       <article class="content-card">
         <h2>这一页该承载什么</h2>
@@ -298,11 +265,11 @@
       <div class="highlight-box">概览页要更像结论页的开场，而不是平铺直叙的文档摘要。</div>
 
       <div class="insight-grid">
-        <div class="insight-chip">
+        <div class="mini-card">
           <strong>Overview</strong>
           <p>用概览、结论、收益点快速建立传播性。</p>
         </div>
-        <div class="insight-chip">
+        <div class="mini-card">
           <strong>Rhythm</strong>
           <p>模块之间要有轻重变化，但不要出现无意义留白。</p>
         </div>
@@ -313,8 +280,8 @@
 
     <section class="page">
       <div class="part-tag">Part 02</div>
-      <h1>拆开看 <span>操作过程</span></h1>
-      <p class="lead">第二页优先承接方法、步骤或流程，并固定预留一块截图空间，方便插入操作演示。</p>
+      <h1>拆开看 <span>方法步骤</span></h1>
+      <p class="lead">第二页优先承接方法、步骤或流程，用时间线和结果卡片撑满页面，让读者不用脑补也能看懂重点。</p>
 
       <div class="timeline">
         <div class="timeline-step">
@@ -327,9 +294,15 @@
         </div>
       </div>
 
-      <div class="visual-placeholder">
-        <strong>操作截图</strong>
-        <p>这里预留给实际界面、关键步骤、路径演示或工作流截图。</p>
+      <div class="result-grid">
+        <div class="mini-card">
+          <strong>Key Move</strong>
+          <p>把最重要的一步单独拎出来，告诉读者什么动作最值钱。</p>
+        </div>
+        <div class="mini-card">
+          <strong>Output</strong>
+          <p>补上这一步完成后读者会得到什么结果，形成闭环。</p>
+        </div>
       </div>
 
       <div class="page-footer">02 / 04</div>
@@ -338,7 +311,7 @@
     <section class="page">
       <div class="part-tag">Part 03</div>
       <h1>顺手避开 <span>常见问题</span></h1>
-      <p class="lead">第三页适合讲误区、坑点、对比关系或判断边界，不放截图位，重点是让信息结构发生变化。</p>
+      <p class="lead">第三页适合讲误区、坑点、对比关系或判断边界，重点是让信息结构发生变化。</p>
 
       <div class="warning-box">这一页适合把“最容易做错的地方”讲透，让读者觉得这份内容有经验含量。</div>
 
@@ -354,8 +327,8 @@
       </div>
 
       <ul class="checklist">
-        <li>把抽象原则改写成用户能直接执行的提醒。</li>
-        <li>尽量用对比、清单或边界判断替代重复叙述。</li>
+        <li class="check-item"><p>把抽象原则改写成用户能直接执行的提醒。</p></li>
+        <li class="check-item"><p>尽量用对比、清单或边界判断替代重复叙述。</p></li>
       </ul>
 
       <div class="page-footer">03 / 04</div>
@@ -364,7 +337,7 @@
     <section class="page">
       <div class="part-tag">Part 04</div>
       <h1>最后落到 <span>行动建议</span></h1>
-      <p class="lead">第四页负责总结、复盘或结果展示，并预留第二个截图位，适合放效果演示、前后对比或成品画面。</p>
+      <p class="lead">第四页负责总结、复盘或结果展示，用结论卡和行动卡收口，而不是为后续补图预留空间。</p>
 
       <div class="highlight-box">收尾页不要只重复前文，要把“现在该怎么做”明确交给读者。</div>
 
@@ -379,9 +352,15 @@
         </div>
       </div>
 
-      <div class="visual-placeholder">
-        <strong>效果演示</strong>
-        <p>这里预留给结果截图、前后对比、案例展示或最终成品效果。</p>
+      <div class="insight-grid">
+        <div class="mini-card">
+          <strong>Recap</strong>
+          <p>把核心原则压缩成一句易记的话，方便截图传播。</p>
+        </div>
+        <div class="mini-card">
+          <strong>Next Step</strong>
+          <p>告诉读者看完之后应该立即做什么，形成明确行动指令。</p>
+        </div>
       </div>
 
       <div class="page-footer">04 / 04</div>

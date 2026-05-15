@@ -16,8 +16,8 @@ Use the fixed visual system in [references/layout-rules.md](references/layout-ru
 3. Split the content into multiple `section.page` blocks at a 1080x1440 visual ratio, implemented at `540x720` for preview.
 4. Remove any standalone cover page. Start directly from `Part 01`.
 5. Keep every page content-dense. Avoid pages that feel empty or poster-like.
-6. Use different content-led structures across pages: summary cards, step timelines, comparison grids, warning lists, checklists, or action summaries.
-7. Reserve screenshot space only on page 2 and page 4. Do not add generic screenshot placeholders to other pages unless the user explicitly asks.
+6. Use different content-led structures across pages: summary cards, step timelines, comparison grids, warning lists, checklists, metric chips, or action summaries.
+7. Make every page fully finished and directly screenshot-ready. Do not leave empty image zones, screenshot slots, or generic placeholders unless the user explicitly asks for them.
 8. Convert paths, commands, menus, and short steps to `<code>` tags where useful.
 9. Present key conclusions, warnings, or takeaways in emphasized blocks using the accent colors.
 10. Return one complete HTML document with embedded CSS and all page markup.
@@ -26,10 +26,10 @@ Use the fixed visual system in [references/layout-rules.md](references/layout-ru
 
 - Plan page roles before writing HTML. Avoid generating four copies of the same structure with different text.
 - Prefer a sequence like: overview -> process / method -> pitfalls / comparison -> summary / action.
-- If the source content is procedural, make page 2 the strongest screenshot-support page.
-- If the source content includes results, demos, or before-after material, make page 4 the secondary screenshot-support page.
-- If there are fewer than 4 pages, keep the page 2 screenshot slot and skip the page 4 slot.
-- If there are more than 4 pages, still reserve screenshot slots only on page 2 and page 4 by default.
+- If the source content is procedural, make page 2 the strongest process page with timelines, steps, or structured checklists.
+- If the source content includes results, demos, or before-after material, translate them into comparison cards, result summaries, or takeaway blocks instead of empty reserved areas.
+- If there are fewer than 4 pages, keep the role progression compact without adding filler sections.
+- If there are more than 4 pages, keep varying the page roles instead of cycling one repeated layout.
 
 ## Content Rules
 
@@ -40,6 +40,7 @@ Use the fixed visual system in [references/layout-rules.md](references/layout-ru
 - Use ordered steps when the source content is procedural.
 - Keep each page focused on one main idea plus supporting details.
 - If the source Markdown is very long, paginate naturally rather than shrinking text aggressively.
+- Replace any urge to "leave space for later" with a real information module that can stand on its own in the final screenshot.
 
 ## Output Rules
 
@@ -47,10 +48,12 @@ Use the fixed visual system in [references/layout-rules.md](references/layout-ru
 - Keep the existing color tokens and typography priorities from the template.
 - Use semantic structure that is easy to edit after generation.
 - Preserve the original orange-blue editorial design language while still varying the page compositions.
+- By default, write the generated HTML file into the current project `generated/` directory. Create that directory first if it does not exist.
+- Base the output filename on the source Markdown filename when one is available, and save it as an `.html` file.
 - Do not include explanations before or after the HTML unless the user asks for commentary.
 
 ## Optional Adjustments
 
 - If the Markdown has clear section headings, map one major heading to one page group.
 - If the Markdown is a short note, expand it into 2-4 pages by separating overview, steps, pitfalls, and summary.
-- If the user provides screenshots or explicitly asks for image slots, add them intentionally and keep the labels explicit so they can replace them later.
+- If the user explicitly asks to include screenshots or image areas, integrate them as intentional content modules rather than generic placeholders.
