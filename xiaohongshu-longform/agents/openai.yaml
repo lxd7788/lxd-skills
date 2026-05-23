@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xiaohongshu Longform"
+  short_description: "Classify and rewrite drafts into save-worthy Xiaohongshu notes."
+  default_prompt: "Use $xiaohongshu-longform to judge whether my draft fits a Xiaohongshu long-form type, then rewrite it into a structured, actionable note."
