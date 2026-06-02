@@ -32,14 +32,14 @@ Do not rewrite as a WeChat-style essay, newsletter, general opinion piece, or me
 
 Use exactly one primary type unless the user's content naturally needs a hybrid.
 
-| Type | Use When | Structure Focus |
-| --- | --- | --- |
-| Beginner explainer | The reader does not understand a concept, tool, or category | Analogy, concept translation, use cases, first steps |
-| Tool tutorial | The reader wants to learn how to use a tool or workflow | Steps, settings, examples, completion standard |
-| Comparison and choice | The reader is choosing between tools, methods, or paths | Recommendation, table, scenario-based choice |
-| Pitfall guide | The reader is likely to make common mistakes | Wrong move, why it fails, better move |
-| Template or prompt pack | The reader wants reusable assets | Scenario, template, example, customization notes |
-| Trend translation | A news item or release needs translation for ordinary users | What happened, why it matters, what to do, what not to panic about |
+| Type                    | Use When                                                    | Structure Focus                                                    |
+| ----------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
+| Beginner explainer      | The reader does not understand a concept, tool, or category | Analogy, concept translation, use cases, first steps               |
+| Tool tutorial           | The reader wants to learn how to use a tool or workflow     | Steps, settings, examples, completion standard                     |
+| Comparison and choice   | The reader is choosing between tools, methods, or paths     | Recommendation, table, scenario-based choice                       |
+| Pitfall guide           | The reader is likely to make common mistakes                | Wrong move, why it fails, better move                              |
+| Template or prompt pack | The reader wants reusable assets                            | Scenario, template, example, customization notes                   |
+| Trend translation       | A news item or release needs translation for ordinary users | What happened, why it matters, what to do, what not to panic about |
 
 ## Fit Test
 

@@ -1,0 +1,3 @@
+display_name: Concept to Knowledge Cards
+short_description: Turn a concept into reviewed knowledge points, then knowledge cards.
+default_prompt: "Turn this concept into reviewed knowledge points first, then generate knowledge card content after confirmation: "
