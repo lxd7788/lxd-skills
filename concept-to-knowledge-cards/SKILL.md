@@ -1,11 +1,11 @@
 ---
 name: concept-to-knowledge-cards
-description: Convert a single AI, technology, tool, trend, or abstract concept into knowledge card content for ordinary AI-interested readers. Use when the user wants a concept turned into reviewed knowledge points first, then into Xiaohongshu/WeChat/short-video style knowledge cards; includes a required two-stage workflow with human review before final card generation.
+description: Convert a single AI, technology, tool, trend, or abstract concept into knowledge card content for ordinary AI-interested readers, including nontechnical outsiders. Use when the user wants a concept turned into reviewed knowledge points first, then into Xiaohongshu/WeChat/short-video style knowledge cards; includes a required two-stage workflow with human review before final card generation.
 ---
 
 # Concept To Knowledge Cards
 
-Use this skill to turn one concept into knowledge card content. The user only needs to provide the concept. Assume the audience is ordinary people who are interested in AI, including people already using or working around AI but without deep technical expertise.
+Use this skill to turn one concept into knowledge card content. The user only needs to provide the concept. Assume the audience is ordinary people who are interested in AI, including nontechnical outsiders and people using or working around AI without deep technical expertise.
 
 ## Core Rule
 
@@ -17,6 +17,22 @@ Use a two-stage workflow:
 
 Do not generate final cards directly when the user only gives a concept. Do not add new facts, cases, claims, or conclusions during the card stage unless they were present in the confirmed knowledge points.
 
+## Audience Calibration
+
+Before writing Stage 1, silently choose the lowest reasonable reader level:
+
+- If the user specifies "pure outsider", "ordinary people", "beginner", or similar, write for someone with no technical background.
+- If the user does not specify a level, prefer a nontechnical but AI-curious reader.
+- Do not assume the reader knows terms such as protocol, client, server, API, infrastructure, ecosystem, database, or model architecture.
+
+Use these conversion rules:
+
+- Replace technical labels with everyday wording first; mention the formal term only when necessary.
+- Explain the reader benefit before the mechanism.
+- Turn abstract mechanisms into situations: "AI can read files", "AI can check a company knowledge base", "AI can operate a tool".
+- For technical concepts, lead with what changes in the product or user experience, not with how the system is built.
+- Avoid making a clean but high-level outline that still leaves cognitive steps for the reader to fill in.
+
 ## Stage 1: Knowledge-Point Draft
 
 For a concept-only request, output a review-friendly draft with these 8 modules:
@@ -24,23 +40,32 @@ For a concept-only request, output a review-friendly draft with these 8 modules:
 1. Concept in one sentence
    - Explain the concept in plain language.
    - Avoid leading with formal technical definitions.
+   - For technical concepts, say what it lets AI or users do before naming the category it belongs to.
 
 2. Why it appeared
    - Explain the problem, need, or change behind the concept.
+   - Use a simple before/after situation instead of industry history when possible.
 
 3. What problem it solves
    - Connect the concept to a real pain point for ordinary AI-interested users.
+   - Prefer "what used to be hard or impossible" over internal implementation details.
 
 4. Core knowledge points
    - Provide 3 to 5 important points.
    - Keep them accurate and suitable for later cards.
+   - Keep each point judgment-oriented: what the reader should understand, distinguish, or not overbelieve.
 
 5. How to understand it
    - Use a simple analogy, relationship explanation, or intuitive description.
    - Avoid analogies that distort the concept.
 
-6. Where ordinary people can use it
-   - Give concrete scenes instead of abstract industry labels.
+6. Why it matters to ordinary readers
+   - Choose the angle based on the concept type.
+   - If the concept has realistic personal or workplace usage, give concrete scenes instead of abstract industry labels.
+   - If the concept is mainly knowledge, infrastructure, protocol, mechanism, theory, or industry background, do not force usage scenes.
+   - For concepts with weak direct use, explain why ordinary AI-interested readers should know it, what it helps them judge, or where they may indirectly encounter it.
+   - Prefer "how this affects tools/products/decisions around you" over "what you can personally do with it" when direct use is weak.
+   - Make the value explicit: trend judgment, product understanding, buying/using decisions, workplace awareness, or avoiding hype.
 
 7. Common misunderstandings
    - Identify 1 to 2 likely misunderstandings or overstatements.
@@ -62,14 +87,14 @@ Follow this reading order:
 2. Pain-point card: establish relevance.
 3. One-sentence explanation card: create basic understanding.
 4. Understanding card: make the abstract concrete.
-5. Value card: show what changes or where it can be used.
+5. Value card: show what changes, where it matters, or where it can realistically be used.
 6. Misunderstanding card: correct a likely misconception.
 7. Boundary summary card: explain limits and close with a memorable summary.
 
 Use flexible card types within those positions:
 
 - Understanding card: choose analogy, relationship diagram, or workflow.
-- Value card: choose before/after comparison, usage scenes, or case.
+- Value card: choose before/after comparison, usage scenes, indirect relevance, product impact, or one concrete case.
 - Add workflow when the concept has clear steps.
 - Add relationship diagram when the concept involves multiple objects.
 - Add before/after comparison when the new-vs-old difference is clear.
@@ -106,11 +131,15 @@ Purpose: make the reader feel "this is related to me."
 
 Only describe the problem. Do not explain the mechanism yet.
 
+For nontechnical concepts, describe a familiar frustration before naming any system component.
+
 ### One-Sentence Explanation Card
 
 Purpose: give a first plain-language understanding.
 
 Use one short human explanation. It does not need to be a complete technical definition.
+
+If a formal term is unavoidable, immediately translate it into everyday language.
 
 ### Understanding Card
 
@@ -126,7 +155,9 @@ Choose the best format for the concept:
 
 Purpose: show what the concept changes or where it matters.
 
-Choose before/after comparison, usage scenes, or one concrete case.
+Choose before/after comparison, usage scenes, indirect relevance, product impact, decision value, or one concrete case.
+
+When direct personal use is weak, focus on why the reader should recognize it: what product ability it enables, what trend it signals, or what hype it helps them avoid.
 
 ### Misunderstanding Card
 
@@ -159,7 +190,7 @@ For Stage 1, use:
 
 ### 5. 可以怎么理解
 
-### 6. 普通人能用在哪
+### 6. 它和普通读者有什么关系
 
 ### 7. 常见误解
 
@@ -217,8 +248,11 @@ End Stage 2 with a brief image-readiness check:
 - Keep cover text minimal and attention-grabbing.
 - Prefer plain language over technical terms.
 - Translate necessary terms into human language.
+- Reduce jargon aggressively for pure outsiders.
+- Start from user-visible changes before explaining invisible mechanisms.
+- Use scenes and benefits to lower cognitive steps.
+- Do not list technical roles or architecture unless the reader needs them to avoid misunderstanding.
 - Use analogies, concrete scenes, and before/after changes when useful.
 - Explain value and limits.
 - Avoid turning cards into article screenshots.
 - Use visual suggestions that can directly guide Xiaohongshu, WeChat image posts, or short-video storyboards.
-
