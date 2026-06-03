@@ -20,61 +20,72 @@
 - 补时/加时/点球：
 ```
 
-## Four-Panel Arc
+## Page Plan
 
 ```text
-标题：
-第 1 格：赛前悬念或开场气势。
-画面：
-文字：
-第 2 格：第一个关键事件。
-画面：
-文字：
-第 3 格：最大转折。
-画面：
-文字：
-第 4 格：比分定格和情绪落点。
-画面：
-文字：
+页数：<1/2/3>
+拆页理由：<为什么一页足够，或为什么需要拆成多页>
+第 1 页主题：
+第 1 页覆盖节点：
+第 2 页主题：
+第 2 页覆盖节点：
+第 3 页主题：
+第 3 页覆盖节点：
 ```
 
-## Six-Panel Arc
+## Non-Uniform Manga Page
 
 ```text
-标题：
-第 1 格：入场、阵势、悬念。
-第 2 格：开场节奏或早期机会。
-第 3 格：上半场关键节点。
-第 4 格：下半场转折。
-第 5 格：终盘冲刺、门将扑救、VAR、换人或补时。
-第 6 格：结果定格，英雄、遗憾或晋级影响。
+页码：
+页面标题：
+页面目的：<铺垫/爆点/反转/终局>
+阅读顺序：<从上到下、从左到右，或明确标注日漫式视觉路径>
+
+主格：
+- 尺寸/位置：<占页面最大面积，跨页感或大主格>
+- 画面：
+- 动作：
+- 文字：
+- 视觉重点：
+
+窄条反应格：
+- 尺寸/位置：<细长横格或竖格>
+- 画面：
+- 文字：
+
+特写格：
+- 尺寸/位置：<脚、球、眼神、手套、门柱、比分牌等局部>
+- 画面：
+- 文字：
+
+留白/球场距离：
+- 位置：
+- 用途：<压迫、孤立、一对一距离、等待感>
+
+拟声/对白气泡：
+- 只使用这些文字："<精确文本>"
+- 构图作用：<速度线、冲击字、低声对白或观众声浪>
 ```
 
-## Eight-Panel Arc
+## Suggested Page Splits
 
 ```text
-标题：
-第 1 格：舞台。
-第 2 格：战术气质。
-第 3 格：第一粒进球或重大机会。
-第 4 格：回应与反击。
-第 5 格：争议或换人。
-第 6 格：常规时间终局。
-第 7 格：加时或点球核心瞬间。
-第 8 格：最终定格。
+1 页：3-5 个关键节点，一个清晰起承转合。
+2 页：6-8 个关键节点，或上下半场各有明显转折。
+3 页：决赛、加时、点球大战、红牌/VAR/伤停补时等密集剧情。
 ```
 
 ## Image Prompt Skeleton
 
 ```text
 Use case: illustration-story
-Asset type: one-page football comic
-Primary request: Create a <4/6/8>-panel comic recap of <match>.
-Facts to depict: <confirmed events only>.
+Asset type: Japanese sports manga page <page X of Y>
+Primary request: Create page <X> of a <1/2/3>-page football comic recap of <match>.
+Facts to depict on this page: <confirmed events only>.
 Scene/backdrop: <stadium, time, atmosphere>.
 Teams: Use generic kits, no official logos.
-Style/medium: dynamic modern manga / sports newspaper comic, or black-and-white Japanese football manga when the user references the sample style.
-Composition/framing: clear reading order, thick panel borders, legible captions.
-Text (verbatim): "<only exact captions>"
-Constraints: no extra text, no official crests, no watermarks, no invented events.
+Style/medium: black-and-white Japanese football manga, non-uniform sports manga page layout, sharp ink linework, screentone shadows, speed lines, dramatic close-ups, open-pitch negative space.
+Composition/framing: avoid standard four-panel or six-panel grid; use one oversized main action panel, narrow reaction panels, close-up insert panels, diagonal motion panels, clear reading order, thick expressive borders.
+Text (verbatim): "<only exact captions, dialogue, or sound effects>"
+Constraints: no extra text, no official crests, no watermarks, no invented events, do not overcrowd the page.
 ```

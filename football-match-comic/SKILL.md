@@ -1,6 +1,6 @@
 ---
 name: football-match-comic
-description: Turn football match reports, live blogs, scorelines, and user-provided match notes into verified comic scripts and image-generation prompts. Use for World Cup, Champions League, domestic cup, derby, knockout, penalty shootout, or any soccer/football match when the user wants a manga/comic recap, match storyboards, four-panel/six-panel/eight-panel comics, key-moment extraction, captions, or sports-comic image prompts.
+description: Turn football match reports, live blogs, scorelines, and user-provided match notes into verified comic scripts and image-generation prompts. Use for World Cup, Champions League, domestic cup, derby, knockout, penalty shootout, or any soccer/football match when the user wants a manga/comic recap, match storyboards, non-uniform Japanese sports manga pages, key-moment extraction, captions, or sports-comic image prompts.
 ---
 
 # Football Match Comic
@@ -12,10 +12,11 @@ Create fact-checked football match comic scripts from recent or historical match
 1. Verify match facts before scripting when the user asks about a recent, live, or just-finished match. Browse current sources for score, venue, timeline, scorers, cards, substitutions, VAR, penalties, injuries, and standings implications. Prefer official competition pages, federation/club reports, reputable live blogs, and stat providers.
 2. Separate confirmed facts from inferred drama. Mark uncertain items as assumptions or omit them from the comic.
 3. Extract 4-8 key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions that changed the match, goalkeeper saves, woodwork, stoppage-time events, extra time, penalties, and qualification consequences.
-4. Choose a format:
-   - 4 panels for routine group-stage matches or a single clean arc.
-   - 6 panels for matches with a clear first-half/second-half turn.
-   - 8 panels for knockout games, extra time, penalty shootouts, or chaotic matches.
+4. Choose a page plan before choosing panels:
+   - 1 page for 3-5 key beats or one clean dramatic arc.
+   - 2 pages for 6-8 key beats, a first-half/second-half turn, or a match with multiple tactical swings.
+   - 3 pages for chaotic knockout matches, extra time, penalty shootouts, or finals where too many decisive moments would crowd one page.
+   - Do not force every key beat into one image. Split pages when captions, score context, and action would become cramped.
 5. Write the comic in Chinese by default unless the user requests another language.
 6. Keep captions short and image-friendly. Avoid tiny text, long paragraphs inside panels, and overloaded scoreboards.
 7. If generating an image, use generic kits and colors rather than official crests or protected tournament logos unless the user provides licensed assets or asks only for a text script.
@@ -26,8 +27,9 @@ For each match, produce:
 
 - Match card: teams, final score, competition stage, venue, date, and outcome.
 - Key nodes: minute-by-minute list of the decisive events.
-- Comic script: panel number, scene, action, caption/dialogue, visual emphasis.
-- Image prompt: one consolidated prompt for a one-page comic, or one prompt per panel if the user wants separate images.
+- Page plan: 1-3 pages, each with a title, dramatic purpose, and the beats it covers.
+- Comic script: page number, panel role, scene, action, caption/dialogue, visual emphasis, and reading order.
+- Image prompt: one prompt per page by default. Use separate panel prompts only when the user explicitly asks for individual images.
 - Source notes: links or names of sources used for facts.
 
 Use `references/panel-template.md` when a reusable structure is helpful.
@@ -43,6 +45,18 @@ Ask only if tone is genuinely important and absent. Otherwise infer:
 - Epic knockout recap: cinematic lighting, larger stakes, trophy or bracket consequences.
 - Tragic exit: restrained color, empty space, missed chance, defeated body language.
 
+## Manga Page Layout
+
+For Japanese sports manga recaps, avoid standard four-panel, six-panel, or evenly spaced grid layouts unless the user explicitly asks for a grid. Use non-uniform manga page composition:
+
+- Give the decisive action a large hero panel with a splash-page or double-page-spread feeling, even when the output is a single page.
+- Intercut narrow reaction panels, foot/ball close-ups, goalkeeper-eye close-ups, scoreboard slivers, and crowd cutaways.
+- Keep reading order clear with panel placement, motion direction, caption position, and visual rhythm.
+- Let speed lines, speech bubbles, impact lettering, and sound effects participate in the composition, but keep text sparse and legible.
+- Use large areas of white space or open pitch to express distance, pressure, isolation, and one-on-one duels.
+- Vary panel shapes: tall vertical pressure panels, thin horizontal time-slice panels, diagonal action panels, small silent inserts, and one oversized main panel.
+- Do not cram every beat onto one page. If a page would need more than 5-6 readable panels or more than 4 short captions, split the story across 2-3 pages.
+
 ## Fact Safety
 
 - Never invent scorers, minutes, cards, penalty takers, or VAR calls.
@@ -55,7 +69,7 @@ Ask only if tone is genuinely important and absent. Otherwise infer:
 
 When creating image prompts:
 
-- Specify panel count, reading order, border style, and text constraints.
+- Specify page count, page-by-page beats, non-uniform panel layout, reading order, border style, and text constraints.
 - Include only the exact text that should appear in the image.
 - Use kit colors, player roles, body language, and stadium atmosphere to identify teams.
 - Ask for clean, legible Chinese captions and no extra text.
