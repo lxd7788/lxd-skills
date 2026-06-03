@@ -1,0 +1,7 @@
+interface:
+  display_name: "Football Match Comic"
+  short_description: "Turn football matches into comic recaps."
+  default_prompt: "Use $football-match-comic to turn this football match into a fact-checked comic script with key moments, captions, and image prompts."
+
+policy:
+  allow_implicit_invocation: true
