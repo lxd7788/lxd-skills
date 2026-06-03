@@ -49,6 +49,7 @@ Ask only if tone is genuinely important and absent. Otherwise infer:
 
 For Japanese sports manga recaps, avoid standard four-panel, six-panel, or evenly spaced grid layouts unless the user explicitly asks for a grid. Use non-uniform manga page composition:
 
+- Each generated image should be a complete manga page with multiple panels, not a single illustration of one scene. When using 2-3 images, each image is page 1/page 2/page 3 of the comic.
 - Give the decisive action a large hero panel with a splash-page or double-page-spread feeling, even when the output is a single page.
 - Intercut narrow reaction panels, foot/ball close-ups, goalkeeper-eye close-ups, scoreboard slivers, and crowd cutaways.
 - Keep reading order clear with panel placement, motion direction, caption position, and visual rhythm.

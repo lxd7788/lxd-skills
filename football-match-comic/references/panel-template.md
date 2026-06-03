@@ -85,7 +85,7 @@ Facts to depict on this page: <confirmed events only>.
 Scene/backdrop: <stadium, time, atmosphere>.
 Teams: Use generic kits, no official logos.
 Style/medium: black-and-white Japanese football manga, non-uniform sports manga page layout, sharp ink linework, screentone shadows, speed lines, dramatic close-ups, open-pitch negative space.
-Composition/framing: avoid standard four-panel or six-panel grid; use one oversized main action panel, narrow reaction panels, close-up insert panels, diagonal motion panels, clear reading order, thick expressive borders.
+Composition/framing: this image is a complete manga page with multiple panels, not a single-scene illustration; avoid standard four-panel or six-panel grid; use one oversized main action panel, narrow reaction panels, close-up insert panels, diagonal motion panels, clear reading order, thick expressive borders.
 Text (verbatim): "<only exact captions, dialogue, or sound effects>"
 Constraints: no extra text, no official crests, no watermarks, no invented events, do not overcrowd the page.
 ```
