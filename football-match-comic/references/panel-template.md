@@ -20,10 +20,23 @@
 - 补时/加时/点球：
 ```
 
+## Cover Concept
+
+```text
+封面用途：小红书/抖音/公众号/其他
+推荐比例：3:4 或 9:16；如用于公众号头图，可另做 16:9 变体
+封面标题：
+封面副标题：
+视觉钩子：<奖杯/点球点/横梁/球飞向夜空/双人对峙/比分牌碎片>
+主体构图：<单张海报构图，不做多分镜叙事>
+文字约束：<标题大、字少、缩略图可读>
+禁用元素：官方队徽、赛事 logo、赞助商、水印、密集小字
+```
+
 ## Page Plan
 
 ```text
-页数：<1/2/3>
+漫画页数：<1/2/3>
 拆页理由：<为什么一页足够，或为什么需要拆成多页>
 第 1 页主题：
 第 1 页覆盖节点：
@@ -70,12 +83,27 @@
 ## Suggested Page Splits
 
 ```text
-1 页：3-5 个关键节点，一个清晰起承转合。
-2 页：6-8 个关键节点，或上下半场各有明显转折。
-3 页：决赛、加时、点球大战、红牌/VAR/伤停补时等密集剧情。
+封面 + 1 页：3-5 个关键节点，一个清晰起承转合。
+封面 + 2 页：6-8 个关键节点，或上下半场各有明显转折。
+封面 + 3 页：决赛、加时、点球大战、红牌/VAR/伤停补时等密集剧情。
 ```
 
-## Image Prompt Skeleton
+## Cover Prompt Skeleton
+
+```text
+Use case: social-cover
+Asset type: vertical cover poster for Xiaohongshu, Douyin, and WeChat publishing
+Primary request: Create a cover image for a football manga recap of <match>.
+Aspect ratio: 3:4 or 9:16 vertical; keep important text and faces in the safe center area.
+Visual hook: <one strong symbolic composition, such as player duel, penalty spot, crossbar, trophy silhouette, stadium lights, or ball flying into night sky>.
+Teams: Use generic kits, no official logos.
+Style/medium: dramatic sports manga cover poster, high contrast, clean thumbnail readability, bold title typography.
+Text (verbatim): "<short title>"; "<optional short subtitle>"
+Composition/framing: single poster composition, not a manga page, not multiple story panels; large title, strong central subject, minimal text, readable at phone thumbnail size.
+Constraints: no extra text, no official crests, no tournament logo, no sponsor marks, no watermarks.
+```
+
+## Manga Page Prompt Skeleton
 
 ```text
 Use case: illustration-story

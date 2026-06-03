@@ -17,9 +17,10 @@ Create fact-checked football match comic scripts from recent or historical match
    - 2 pages for 6-8 key beats, a first-half/second-half turn, or a match with multiple tactical swings.
    - 3 pages for chaotic knockout matches, extra time, penalty shootouts, or finals where too many decisive moments would crowd one page.
    - Do not force every key beat into one image. Split pages when captions, score context, and action would become cramped.
-5. Write the comic in Chinese by default unless the user requests another language.
-6. Keep captions short and image-friendly. Avoid tiny text, long paragraphs inside panels, and overloaded scoreboards.
-7. If generating an image, use generic kits and colors rather than official crests or protected tournament logos unless the user provides licensed assets or asks only for a text script.
+5. For publishable packages, include a cover concept before the manga pages unless the user asks for pages only.
+6. Write the comic in Chinese by default unless the user requests another language.
+7. Keep captions short and image-friendly. Avoid tiny text, long paragraphs inside panels, and overloaded scoreboards.
+8. If generating an image, use generic kits and colors rather than official crests or protected tournament logos unless the user provides licensed assets or asks only for a text script.
 
 ## Output Shape
 
@@ -27,9 +28,10 @@ For each match, produce:
 
 - Match card: teams, final score, competition stage, venue, date, and outcome.
 - Key nodes: minute-by-minute list of the decisive events.
+- Cover concept: one platform-friendly cover image for Xiaohongshu, Douyin, WeChat official account, or other social publishing, unless omitted by request.
 - Page plan: 1-3 pages, each with a title, dramatic purpose, and the beats it covers.
 - Comic script: page number, panel role, scene, action, caption/dialogue, visual emphasis, and reading order.
-- Image prompt: one prompt per page by default. Use separate panel prompts only when the user explicitly asks for individual images.
+- Image prompt: one cover prompt plus one prompt per manga page by default. Use separate panel prompts only when the user explicitly asks for individual images.
 - Source notes: links or names of sources used for facts.
 
 Use `references/panel-template.md` when a reusable structure is helpful.
@@ -44,6 +46,18 @@ Ask only if tone is genuinely important and absent. Otherwise infer:
 - Comedy four-panel: ironic captions, reaction shots, one punchline.
 - Epic knockout recap: cinematic lighting, larger stakes, trophy or bracket consequences.
 - Tragic exit: restrained color, empty space, missed chance, defeated body language.
+
+## Cover Design
+
+When the output is meant for publishing on Xiaohongshu, Douyin, WeChat official accounts, or similar social platforms, recommend a separate cover image before the manga pages. The cover is a click-through poster, not a story page.
+
+- Default package: 1 cover image plus 1-3 complete manga pages.
+- Cover format: vertical first, usually 3:4 or 9:16. Mention that a 16:9 variant can be made for WeChat article headers if needed.
+- The cover should not use multi-panel manga storytelling. Use one strong poster composition with a clear subject, bold title, and minimal supporting text.
+- Make the cover readable as a thumbnail: large title, strong player silhouettes or duel pose, clear team color contrast, and one central symbolic object such as a ball, penalty spot, crossbar, stadium lights, trophy silhouette, or scoreboard fragment.
+- Keep cover text short: title plus optional subtitle. Avoid long match summaries, dense facts, minute lists, and tiny captions.
+- Use generic kits and symbolic design instead of official crests, tournament logos, or sponsor marks.
+- The cover should promise the emotional hook of the comic, while the manga pages deliver the sequence of events.
 
 ## Manga Page Layout
 
@@ -70,7 +84,9 @@ For Japanese sports manga recaps, avoid standard four-panel, six-panel, or evenl
 
 When creating image prompts:
 
-- Specify page count, page-by-page beats, non-uniform panel layout, reading order, border style, and text constraints.
+- Specify whether the prompt is for a social cover or a manga page.
+- For cover prompts, specify platform-oriented vertical composition, title, subtitle, focal subject, thumbnail readability, and no multi-panel storytelling.
+- For manga page prompts, specify page count, page-by-page beats, non-uniform panel layout, reading order, border style, and text constraints.
 - Include only the exact text that should appear in the image.
 - Use kit colors, player roles, body language, and stadium atmosphere to identify teams.
 - Ask for clean, legible Chinese captions and no extra text.
