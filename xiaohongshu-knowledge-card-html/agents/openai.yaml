@@ -1,5 +1,0 @@
-interface:
-  display_name: "Xiaohongshu Card HTML"
-  short_description: "Turn Markdown into orange-blue 3:4 Xiaohongshu-style HTML cards."
-  brand_color: "#e85d26"
-  default_prompt: "Use $xiaohongshu-knowledge-card-html to turn the attached Markdown into screenshot-ready Xiaohongshu-style HTML pages."
