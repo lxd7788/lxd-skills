@@ -152,6 +152,31 @@ For Japanese sports manga recaps, avoid standard four-panel, six-panel, or evenl
 - Do not cram every beat onto one page. If a page would need more than 5-7 readable panels or too many captions, split the story.
 - Split pages by dramatic function, not by equal event count. If a decisive event contains setup, waiting, hesitation, crowd reaction, bench reaction, performer selection, referee/VAR suspense, or shoot-out psychology, give that material its own page when needed.
 
+## Black-and-White Brightness
+
+Black-and-white manga means bright paper, ink linework, and controlled screentone; it does not mean dark backgrounds or black poster pages.
+
+For manga pages, default to:
+
+- Mostly white page background with clean panel gutters.
+- Bright, readable panels with white paper showing through.
+- Sparse or moderate screentone for shadows, crowds, depth, and mood.
+- Heavy black only for focal silhouettes, speed lines, impact lettering, hair/uniform accents, night windows, or small dramatic inserts.
+- Daylight, overcast daylight, bright airport terminals, clear training grounds, press rooms, or documentary-news lighting when the event is a departure, arrival, ceremony, training, or pre-match build-up.
+
+Avoid unless the user explicitly asks for a dark poster style:
+
+- Full black backgrounds.
+- Dark page wash across most panels.
+- Night-map compositions for interior story pages.
+- Overusing "high contrast", "dramatic lighting", "glowing", "night", or "cinematic" in ways that push the model toward black-heavy art.
+- Treating every manga page like a cover poster.
+
+Differentiate cover and interior pages:
+
+- Covers may use stronger contrast, but must still preserve readable bright areas and avoid solid black backgrounds unless requested.
+- Interior story pages must prioritize clarity, white space, panel readability, and caption legibility over atmosphere.
+
 ## Text and Identity Rules
 
 - Keep text minimal, but preserve identity anchors when needed: team names, key people, minute, score, and result.
@@ -182,6 +207,7 @@ When creating image prompts:
 - Use kit colors, player roles, body language, and stadium atmosphere to identify teams.
 - Ask for clean, legible Chinese captions and no extra text. When final text must be accurate, ask for clean caption boxes and plan to overlay text later.
 - For the default style, use "black-and-white Japanese football documentary manga", "non-uniform panel layout", "high contrast ink linework", "screentone shadows", and "speed lines".
+- Add brightness constraints for black-and-white manga pages: "bright white paper background", "mostly white panels", "light-to-moderate screentone", "no full black background", "no dark page wash", and "keep all panels bright and readable".
 - Add layout constraints when needed, such as: "Do not stack all panels as horizontal strips", "use one wide top panel", "use one diagonal action panel", and "use two stacked vertical close-up panels".
 
 For image generation, prefer invoking the `imagegen` skill/tool after the script is stable.
