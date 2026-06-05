@@ -12,6 +12,7 @@ Create fact-checked football manga scripts from real football events. Support bo
 Load only the reference needed for the task:
 
 - Use `references/world-cup-comic-production-rules-v1.md` for tournament serials, World Cup documentary comics, social-media slide comics, 3:4 vertical pages, black-and-white Japanese manga style, visual bible rules, episode structure, and identity-text rules.
+- Also use `references/world-cup-comic-production-rules-v1.md` for any single-match task that targets the social-media slide-comic style, staged fact/material research, identity anchors, or black-and-white non-uniform manga pages.
 - Use `references/panel-template.md` when a reusable output skeleton is helpful for match cards, key nodes, page plans, manga page layouts, and prompt skeletons.
 
 Keep `SKILL.md` as the execution entry point; keep detailed production rules in references.
@@ -28,10 +29,12 @@ Use when the user provides a tournament event point, such as "World Cup teams be
 
 ## Core Workflow
 
+Default to staged execution unless the user explicitly asks for a fast one-pass output. Do not jump from fact research directly to storyboard and prompts when the user has not opted out of the supplement checkpoint.
+
 1. Identify the mode: single match recap or tournament serial event.
 2. Use a dual-source research strategy: official sources establish facts; broader internet sources surface visual, emotional, and public-discussion material. Do not let non-authoritative sources override official facts.
 3. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts for facts.
-4. Present the fact package and ask whether the user has supplemental keywords, angles, screenshots, clips, player moments, fan reactions, or media hooks for a second search. If the user wants a fast one-pass result, proceed without asking.
+4. Stop after the fact package and ask whether the user has supplemental keywords, angles, screenshots, clips, player moments, fan reactions, or media hooks for a second search. Wait for the user's answer before building the material pool, unless the user explicitly requested a fast one-pass result.
 5. Search broader sources for comic material when useful, including any user-supplied keywords: live photos, broadcasts, highlights, interviews, tactical analysis, media headlines, fan reactions, team social posts, and public discussion. Use these as material leads, not final fact authority.
 6. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
 7. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
@@ -44,12 +47,15 @@ Use when the user provides a tournament event point, such as "World Cup teams be
 
 ## Output Shape
 
-For each match or event, produce:
+For staged execution, first produce only:
 
 - Event point: the user's keyword, match, or episode topic.
 - Fact sources: official or authoritative sources used to verify the event.
 - Fact package: teams/people, date, venue, score/result when relevant, timeline, and consequences.
 - User supplement checkpoint: ask for optional keywords or material angles before the second search unless the user requested a fast one-pass output.
+
+After the user answers the supplement checkpoint, continue with:
+
 - Material sources: broader internet sources used for visual, emotional, tactical, or public-discussion material.
 - Material pool: core event elements, environment, reactions, match-mechanism elements, symbols, and usable close-ups.
 - Selected materials: explain which non-core elements are worth using and why.
