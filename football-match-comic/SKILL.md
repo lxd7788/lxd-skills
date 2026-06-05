@@ -32,11 +32,11 @@ Use when the user provides a tournament event point, such as "World Cup teams be
 Default to staged execution unless the user explicitly asks for a fast one-pass output. Do not jump from fact research directly to storyboard and prompts when the user has not opted out of the supplement checkpoint.
 
 1. Identify the mode: single match recap or tournament serial event.
-2. Use a dual-source research strategy: official sources establish facts; broader internet sources surface visual, emotional, and public-discussion material. Do not let non-authoritative sources override official facts.
-3. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts for facts.
+2. Use a dual-source research strategy: official sources establish facts; broader internet and Chinese media/platform sources surface visual, emotional, and public-discussion material. Do not let non-authoritative sources override official facts.
+3. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts for facts. In the same event-research pass, also run the Chinese media/platform discovery pass described below; do not postpone all Chinese-platform discovery until after the supplement checkpoint.
 4. Stop after the fact package and ask whether the user has supplemental keywords, angles, screenshots, clips, player moments, fan reactions, or media hooks for a second search. Wait for the user's answer before building the material pool, unless the user explicitly requested a fast one-pass result.
 5. Search broader sources for comic material when useful, including any user-supplied keywords: live photos, broadcasts, highlights, interviews, tactical analysis, media headlines, fan reactions, team social posts, and public discussion. Use these as material leads, not final fact authority.
-6. Whenever online material research is performed, run a mandatory China platform material radar covering Weibo, Douyin, Xiaohongshu, and Bilibili. Do this even if official/English-language research already found enough facts.
+6. Whenever online event/material research is performed, run a mandatory China platform material radar covering Weibo, Douyin, Xiaohongshu, and Bilibili alongside the official/authority search. Do this even if official/English-language research already found enough facts.
 7. For tournament-wide or multi-team events, run a subject-level micro-event scan after the overview search. Overall tournament facts do not replace team-by-team, player-by-player, coach-by-coach, host-city-by-host-city, or ceremony-by-ceremony searches.
 8. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
 9. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
@@ -69,7 +69,7 @@ Use social platforms and short-video sources for story discovery, not final fact
 
 ## China Platform Material Radar
 
-Any task that involves online material research must include a China platform material radar before the material pool is finalized. This is mandatory for match recaps, World Cup serial episodes, pre-match atmosphere, team departure/arrival stories, fan-reaction pieces, and social slide comics.
+Any task that involves online event or material research must include a China platform material radar. Run a first-pass radar during fact/material discovery, before the supplement checkpoint, then expand it after the user supplies keywords when needed. This is mandatory for match recaps, World Cup serial episodes, pre-match atmosphere, team departure/arrival stories, fan-reaction pieces, and social slide comics.
 
 Search all four platforms separately:
 
@@ -88,6 +88,8 @@ site:bilibili.com/video <event/team/player> <大名单|出征|抵达|解说|复�
 ```
 
 If web-indexed results are thin, state that limitation and still report the attempted platform radar. Do not replace the radar with generic web/news searches.
+
+If the four platform-specific searches are thin or noisy, run a Chinese media fallback search in the same pass, using Baidu-style/open-web Chinese queries for CCTV, Xinhua, People's Daily, Sina, Sohu, Tencent, NetEase, The Paper, Dongqiudi, Hupu, and other relevant Chinese-language media or communities. This fallback supplements the platform radar; it does not replace the four-platform attempt.
 
 Output the radar as a compact table or list with:
 
@@ -131,6 +133,7 @@ For staged execution, first produce only:
 - Event point: the user's keyword, match, or episode topic.
 - Fact sources: official or authoritative sources used to verify the event.
 - Fact package: teams/people, date, venue, score/result when relevant, timeline, and consequences.
+- Initial Chinese media/platform radar: first-pass Weibo, Douyin, Xiaohongshu, Bilibili, and Chinese-media fallback findings, clearly separated from verified facts.
 - User supplement checkpoint: ask for optional keywords or material angles before the second search unless the user requested a fast one-pass output.
 
 After the user answers the supplement checkpoint, continue with:
