@@ -36,16 +36,35 @@ Default to staged execution unless the user explicitly asks for a fast one-pass 
 3. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts for facts.
 4. Stop after the fact package and ask whether the user has supplemental keywords, angles, screenshots, clips, player moments, fan reactions, or media hooks for a second search. Wait for the user's answer before building the material pool, unless the user explicitly requested a fast one-pass result.
 5. Search broader sources for comic material when useful, including any user-supplied keywords: live photos, broadcasts, highlights, interviews, tactical analysis, media headlines, fan reactions, team social posts, and public discussion. Use these as material leads, not final fact authority.
-6. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
-7. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
-8. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
-9. Build a story spine before page planning: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste. Do not proceed if the spine only restates the match chronology.
-10. Turn facts, selected material, and the story spine into an outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
-11. Choose page count by dramatic function before writing panels. Do not force too many beats into one page.
-12. Write in Chinese by default unless the user requests another language.
-13. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
-14. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
-15. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+6. For tournament-wide or multi-team events, run a subject-level micro-event scan after the overview search. Overall tournament facts do not replace team-by-team, player-by-player, coach-by-coach, host-city-by-host-city, or ceremony-by-ceremony searches.
+7. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
+8. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
+9. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
+10. Build a story spine before page planning: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste. Do not proceed if the spine only restates the match chronology.
+11. Turn facts, selected material, and the story spine into an outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
+12. Choose page count by dramatic function before writing panels. Do not force too many beats into one page.
+13. Write in Chinese by default unless the user requests another language.
+14. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
+15. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
+16. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+
+## Research Granularity
+
+Use overview searches to establish the frame, then deliberately lower the search granularity for story material. A tournament-level search is good for dates, format, participants, and official consequences; it is weak for departure rituals, arrival images, ceremonies, team visits, political or cultural photo moments, locker-room material, local fan scenes, and short-video jokes.
+
+For tournament serials, perform a micro-event scan before building the material pool:
+
+- List the primary subjects that could carry the episode: teams, star players, coaches, host cities, fan groups, federations, public figures, ceremonies, transport moments, and training bases.
+- Search at least the most story-relevant subjects individually, using specific verbs and scene nouns such as departure, arrival, welcome, send-off, airport, flight, ceremony, training camp, team photo, president, mayor, fans, chant, tears, family, luggage, bus, tunnel, and social post.
+- Search both official/authority sources and social/video platforms for each subject when the episode is about atmosphere, departure, or public emotion.
+- Keep a "micro-event radar" list with source, subject, scene, fact confidence, and manga value.
+- If the first pass only returns schedules, groups, and formats, treat the material search as incomplete for a story-driven comic.
+
+Use social platforms and short-video sources for story discovery, not final fact authority:
+
+- Include platforms relevant to the audience and event, such as Weibo, Douyin, Xiaohongshu, Bilibili, TikTok, Instagram/Reels, YouTube Shorts, X/Twitter, Reddit, fan forums, and local-language sports communities.
+- Extract hooks such as visual moments, jokes, chants, crowd mood, farewell rituals, arrival rituals, repeated comments, meme labels, and editing rhythms.
+- Verify any concrete claim from these hooks through official accounts, original videos, reputable media, or multiple independent sources before presenting it as fact.
 
 ## Story Spine and Director Pass
 
