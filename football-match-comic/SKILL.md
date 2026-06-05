@@ -39,11 +39,35 @@ Default to staged execution unless the user explicitly asks for a fast one-pass 
 6. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
 7. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
 8. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
-9. Turn facts and selected material into a story outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
-10. Choose page count before writing panels. Do not force too many beats into one page.
-11. Write in Chinese by default unless the user requests another language.
-12. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
-13. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+9. Build a story spine before page planning: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste. Do not proceed if the spine only restates the match chronology.
+10. Turn facts, selected material, and the story spine into an outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
+11. Choose page count by dramatic function before writing panels. Do not force too many beats into one page.
+12. Write in Chinese by default unless the user requests another language.
+13. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
+14. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
+15. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+
+## Story Spine and Director Pass
+
+Never write the final comic script immediately after fact extraction. Always produce a story spine first, then draft the script, then run a director pass before prompts.
+
+The story spine must answer:
+
+- Protagonist pressure: whose emotional journey carries the comic?
+- Dramatic question: what is the reader waiting to see resolved?
+- Suspense engine: which moment should be slowed down instead of summarized?
+- Turning-point staging: what must the reader feel before the decisive action?
+- Aftertaste: what remains emotionally after the result?
+
+The director pass must check:
+
+- Camera placement: wide stadium, bench, crowd, player close-up, goalkeeper view, ball/boot inserts, or empty pitch.
+- Silent panels: where waiting, hesitation, breath, or fatigue should replace action.
+- Reaction panels: crowd, bench, goalkeeper, teammates, opponents, coaches, and scoreboard fragments.
+- Delayed action: whether the decisive moment has enough setup to feel earned.
+- Page purpose: each page must have a dramatic job, not just a list of events.
+
+Revise before producing prompts if the script lacks suspense, reaction shots, page-level dramatic purpose, or visual rhythm.
 
 ## Output Shape
 
@@ -59,10 +83,12 @@ After the user answers the supplement checkpoint, continue with:
 - Material sources: broader internet sources used for visual, emotional, tactical, or public-discussion material.
 - Material pool: core event elements, environment, reactions, match-mechanism elements, symbols, and usable close-ups.
 - Selected materials: explain which non-core elements are worth using and why.
+- Story spine: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste.
 - Story outline: the distilled dramatic arc.
 - Page-count judgment: explain why the event needs 1 page, 2-3 pages, 4-5 pages, or a split episode.
 - Page plan: each page title, dramatic purpose, and covered beats.
 - Comic script: page number, panel role, scene, action, caption/dialogue, visual emphasis, and reading order.
+- Director pass: note how the script uses camera placement, waiting, reaction shots, and delayed decisive action; revise weak pages before prompts.
 - Image prompt: one prompt per manga page by default. Include cover prompts only for chapter covers, major events, social cover requests, or final collections.
 - Boundary note: state what is factual and what is manga expression.
 
@@ -105,6 +131,7 @@ For Japanese sports manga recaps, avoid standard four-panel, six-panel, or evenl
 - Vary panel shapes: tall vertical pressure panels, thin horizontal time-slice panels, diagonal action panels, small silent inserts, and one oversized main panel.
 - Do not stack every panel as horizontal strips. Include vertical close-up panels or diagonal action panels when the page needs energy.
 - Do not cram every beat onto one page. If a page would need more than 5-7 readable panels or too many captions, split the story.
+- Split pages by dramatic function, not by equal event count. If a decisive event contains setup, waiting, hesitation, crowd reaction, bench reaction, performer selection, referee/VAR suspense, or shoot-out psychology, give that material its own page when needed.
 
 ## Text and Identity Rules
 
@@ -122,6 +149,8 @@ For Japanese sports manga recaps, avoid standard four-panel, six-panel, or evenl
 - For ongoing matches, state the timestamp of the information and avoid final language.
 - Do not claim a team advanced, won a group, or was eliminated unless standings consequences are confirmed.
 - Avoid using exact official logos in image prompts. Use visual proxies such as "red shirts with white sleeves" or "deep navy shirts with a central stripe".
+- Treat broadcast-observed or user-supplied micro-details that lack authoritative confirmation as staging material, not confirmed fact. Label them as user-provided, visual interpretation, or assumption in the boundary note.
+- When using unconfirmed micro-details in scripts or prompts, phrase them ambiguously. For example, write "a midfielder approaches the penalty spot before the eventual taker steps in" rather than claiming a confirmed handoff of penalty-taking duty.
 
 ## Prompting Guidelines
 
