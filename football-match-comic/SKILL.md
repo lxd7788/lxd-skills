@@ -29,22 +29,30 @@ Use when the user provides a tournament event point, such as "World Cup teams be
 ## Core Workflow
 
 1. Identify the mode: single match recap or tournament serial event.
-2. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts.
-3. Separate confirmed facts from interpretation and manga expression. Mark uncertain details as assumptions or omit them.
-4. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
-5. Turn facts into a story outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
-6. Choose page count before writing panels. Do not force too many beats into one page.
-7. Write in Chinese by default unless the user requests another language.
-8. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
-9. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+2. Use a dual-source research strategy: official sources establish facts; broader internet sources surface visual, emotional, and public-discussion material. Do not let non-authoritative sources override official facts.
+3. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts for facts.
+4. Present the fact package and ask whether the user has supplemental keywords, angles, screenshots, clips, player moments, fan reactions, or media hooks for a second search. If the user wants a fast one-pass result, proceed without asking.
+5. Search broader sources for comic material when useful, including any user-supplied keywords: live photos, broadcasts, highlights, interviews, tactical analysis, media headlines, fan reactions, team social posts, and public discussion. Use these as material leads, not final fact authority.
+6. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
+7. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
+8. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
+9. Turn facts and selected material into a story outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
+10. Choose page count before writing panels. Do not force too many beats into one page.
+11. Write in Chinese by default unless the user requests another language.
+12. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
+13. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
 
 ## Output Shape
 
 For each match or event, produce:
 
 - Event point: the user's keyword, match, or episode topic.
-- Source notes: links or names of sources used for facts.
+- Fact sources: official or authoritative sources used to verify the event.
 - Fact package: teams/people, date, venue, score/result when relevant, timeline, and consequences.
+- User supplement checkpoint: ask for optional keywords or material angles before the second search unless the user requested a fast one-pass output.
+- Material sources: broader internet sources used for visual, emotional, tactical, or public-discussion material.
+- Material pool: core event elements, environment, reactions, match-mechanism elements, symbols, and usable close-ups.
+- Selected materials: explain which non-core elements are worth using and why.
 - Story outline: the distilled dramatic arc.
 - Page-count judgment: explain why the event needs 1 page, 2-3 pages, 4-5 pages, or a split episode.
 - Page plan: each page title, dramatic purpose, and covered beats.
