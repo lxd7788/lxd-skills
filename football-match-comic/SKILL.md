@@ -36,17 +36,18 @@ Default to staged execution unless the user explicitly asks for a fast one-pass 
 3. Verify real-world facts before scripting. Browse current sources for recent, live, just-finished, or high-stakes events. Prefer official competition pages, federation/club reports, reputable live blogs, stat providers, press conferences, and verified public posts for facts.
 4. Stop after the fact package and ask whether the user has supplemental keywords, angles, screenshots, clips, player moments, fan reactions, or media hooks for a second search. Wait for the user's answer before building the material pool, unless the user explicitly requested a fast one-pass result.
 5. Search broader sources for comic material when useful, including any user-supplied keywords: live photos, broadcasts, highlights, interviews, tactical analysis, media headlines, fan reactions, team social posts, and public discussion. Use these as material leads, not final fact authority.
-6. For tournament-wide or multi-team events, run a subject-level micro-event scan after the overview search. Overall tournament facts do not replace team-by-team, player-by-player, coach-by-coach, host-city-by-host-city, or ceremony-by-ceremony searches.
-7. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
-8. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
-9. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
-10. Build a story spine before page planning: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste. Do not proceed if the spine only restates the match chronology.
-11. Turn facts, selected material, and the story spine into an outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
-12. Choose page count by dramatic function before writing panels. Do not force too many beats into one page.
-13. Write in Chinese by default unless the user requests another language.
-14. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
-15. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
-16. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+6. Whenever online material research is performed, run a mandatory China platform material radar covering Weibo, Douyin, Xiaohongshu, and Bilibili. Do this even if official/English-language research already found enough facts.
+7. For tournament-wide or multi-team events, run a subject-level micro-event scan after the overview search. Overall tournament facts do not replace team-by-team, player-by-player, coach-by-coach, host-city-by-host-city, or ceremony-by-ceremony searches.
+8. Separate confirmed facts from interpretation, public reaction, and manga expression. Mark uncertain details as assumptions or omit them.
+9. Build a material pool, then select only elements that strengthen clarity, rhythm, or emotion. Do not add stadium, media, fan, tactical, or symbolic elements merely to make a page feel busy.
+10. Extract the key beats. Prioritize goals, disallowed goals, red cards, VAR decisions, tactical swings, substitutions, saves, woodwork, stoppage time, extra time, penalties, qualification consequences, departures, arrivals, public ceremonies, and emotional turning points.
+11. Build a story spine before page planning: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste. Do not proceed if the spine only restates the match chronology.
+12. Turn facts, selected material, and the story spine into an outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
+13. Choose page count by dramatic function before writing panels. Do not force too many beats into one page.
+14. Write in Chinese by default unless the user requests another language.
+15. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
+16. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
+17. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
 
 ## Research Granularity
 
@@ -65,6 +66,41 @@ Use social platforms and short-video sources for story discovery, not final fact
 - Include platforms relevant to the audience and event, such as Weibo, Douyin, Xiaohongshu, Bilibili, TikTok, Instagram/Reels, YouTube Shorts, X/Twitter, Reddit, fan forums, and local-language sports communities.
 - Extract hooks such as visual moments, jokes, chants, crowd mood, farewell rituals, arrival rituals, repeated comments, meme labels, and editing rhythms.
 - Verify any concrete claim from these hooks through official accounts, original videos, reputable media, or multiple independent sources before presenting it as fact.
+
+## China Platform Material Radar
+
+Any task that involves online material research must include a China platform material radar before the material pool is finalized. This is mandatory for match recaps, World Cup serial episodes, pre-match atmosphere, team departure/arrival stories, fan-reaction pieces, and social slide comics.
+
+Search all four platforms separately:
+
+- Weibo: hot-search wording, super-topic posts, federation or media posts, journalist posts, comment-section phrases, widely repeated jokes, and controversy tags.
+- Douyin: short-video hooks, visible scene nouns, soundtrack/editing rhythm, comment memes, player-reaction clips, fan edits, and platform topic labels.
+- Xiaohongshu: viewing-party context, city check-ins, outfit/kit culture, travel notes, fan diaries, venue guides, emotional personal posts, and visual lifestyle framing.
+- Bilibili: explainer titles, fan edits, tactical videos, commentary phrases, compilation titles, danmaku-like repeated jokes when available, and long-form narrative angles.
+
+Use platform-specific searches when direct app/search access is unavailable. Start with public web-index queries such as:
+
+```text
+site:weibo.com <event/team/player> <departure|arrival|airport|training|hot search|topic>
+site:douyin.com/video <event/team/player> <出征|抵达|训练|热梗|世界杯>
+site:xiaohongshu.com/explore <event/team/player> <观赛|打卡|机场|穿搭|训练基地>
+site:bilibili.com/video <event/team/player> <大名单|出征|抵达|解说|复盘|热梗>
+```
+
+If web-indexed results are thin, state that limitation and still report the attempted platform radar. Do not replace the radar with generic web/news searches.
+
+Output the radar as a compact table or list with:
+
+```text
+platform
+query or source
+subject
+scene/hook
+fact confidence: confirmed / needs verification / social mood only
+manga value
+```
+
+Treat China platform findings as material leads unless they come from verified official accounts or can be confirmed by authoritative sources. Concrete claims such as squads, injuries, departures, dates, quotes, scores, and disciplinary events must be verified before entering the fact package.
 
 ## Story Spine and Director Pass
 
@@ -100,6 +136,7 @@ For staged execution, first produce only:
 After the user answers the supplement checkpoint, continue with:
 
 - Material sources: broader internet sources used for visual, emotional, tactical, or public-discussion material.
+- China platform material radar: Weibo, Douyin, Xiaohongshu, and Bilibili findings, with fact confidence and manga value.
 - Material pool: core event elements, environment, reactions, match-mechanism elements, symbols, and usable close-ups.
 - Selected materials: explain which non-core elements are worth using and why.
 - Story spine: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste.
