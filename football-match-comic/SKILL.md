@@ -47,7 +47,7 @@ Default to staged execution unless the user explicitly asks for a fast one-pass 
 14. Write in Chinese by default unless the user requests another language.
 15. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
 16. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
-17. If generating images, use generic kits and visual proxies instead of official crests, protected tournament logos, sponsors, or watermarks unless the user provides licensed assets or asks only for text.
+17. If generating images for non-commercial documentary/fan manga, preserve real football identity: national-team kit colors, recognizable patterns, player roles, hairstyles, posture, and known football body language are encouraged. Avoid sponsor logos, watermarks, and official tournament logo marks unless the user provides licensed assets or explicitly asks for them.
 
 ## Research Granularity
 
@@ -159,7 +159,7 @@ Ask only if tone is genuinely important and absent. Otherwise infer:
 
 - News comic: balanced, factual, editorial.
 - Hot-blooded manga: exaggerated motion, heroic framing, emotional close-ups.
-- Black-and-white Japanese football manga: traditional shonen sports manga, monochrome ink linework, screentone shadows, dense hatching, strong perspective football action panels, speed lines, sharp speech bubbles, crowd reaction cutaways, tactical pressure, breakthroughs, shots, and key duels. Avoid color, photorealism, cute/chibi proportions, official logos, and supernatural effects unless requested.
+- Black-and-white Japanese football manga: traditional shonen sports manga, monochrome ink linework, screentone shadows, dense hatching, strong perspective football action panels, speed lines, sharp speech bubbles, crowd reaction cutaways, tactical pressure, breakthroughs, shots, and key duels. Use real-team visual identity cues and recognizable player silhouettes when they help readers understand the scene. Avoid color, photorealism, cute/chibi proportions, sponsor/logo clutter, and supernatural effects unless requested.
 - Comedy four-panel: ironic captions, reaction shots, one punchline.
 - Epic knockout recap: cinematic lighting, larger stakes, trophy or bracket consequences.
 - Tragic exit: restrained color, empty space, missed chance, defeated body language.
@@ -173,7 +173,7 @@ For serial social-media slide comics, do not add a cover to every episode by def
 - The cover should not use multi-panel manga storytelling. Use one strong poster composition with a clear subject, bold title, and minimal supporting text.
 - Make the cover readable as a thumbnail: large title, strong player silhouettes or duel pose, clear team color contrast, and one central symbolic object such as a ball, penalty spot, crossbar, stadium lights, trophy silhouette, or scoreboard fragment.
 - Keep cover text short: title plus optional subtitle. Avoid long match summaries, dense facts, minute lists, and tiny captions.
-- Use generic kits and symbolic design instead of official crests, tournament logos, or sponsor marks.
+- Use recognizable national-team kit colors, patterns, flags, player silhouettes, and symbolic design. Avoid sponsor logos, watermarks, and official tournament logo marks unless the user asks for licensed/official-asset treatment.
 - The cover should promise the emotional hook of the comic, while the manga pages deliver the sequence of events.
 
 ## Manga Page Layout
@@ -224,7 +224,7 @@ Differentiate cover and interior pages:
 - Keep each text block short; use labels, scoreboard fragments, jersey-name captions, title cards, or short speech bubbles.
 - Use Chinese text by default.
 - For generated images, ask for only the exact text items that should appear. If text accuracy matters, ask the model to leave clean caption spaces and add final text in post-production.
-- Avoid jersey numbers unless they are confirmed and explicitly requested.
+- Jersey numbers may be used when they are confirmed and useful for recognition. If numbers are not important or not verified, avoid prompting random jersey numbers.
 
 ## Fact Safety
 
@@ -232,7 +232,7 @@ Differentiate cover and interior pages:
 - If sources conflict, mention the conflict and use the more authoritative source.
 - For ongoing matches, state the timestamp of the information and avoid final language.
 - Do not claim a team advanced, won a group, or was eliminated unless standings consequences are confirmed.
-- Avoid using exact official logos in image prompts. Use visual proxies such as "red shirts with white sleeves" or "deep navy shirts with a central stripe".
+- For non-commercial documentary/fan manga prompts, prioritize recognizable team identity: kit colors, stripe patterns, flags, silhouettes, player names, hairstyles, body type, position, and iconic football gestures. Avoid sponsor logos, watermarks, and official tournament logo marks unless the user provides or requests licensed assets.
 - Treat broadcast-observed or user-supplied micro-details that lack authoritative confirmation as staging material, not confirmed fact. Label them as user-provided, visual interpretation, or assumption in the boundary note.
 - When using unconfirmed micro-details in scripts or prompts, phrase them ambiguously. For example, write "a midfielder approaches the penalty spot before the eventual taker steps in" rather than claiming a confirmed handoff of penalty-taking duty.
 
@@ -244,7 +244,7 @@ When creating image prompts:
 - For cover prompts, specify platform-oriented vertical composition, title, subtitle, focal subject, thumbnail readability, and no multi-panel storytelling.
 - For manga page prompts, specify page count, page-by-page beats, non-uniform panel layout, reading order, border style, and text constraints.
 - Include only the exact text that should appear in the image.
-- Use kit colors, player roles, body language, and stadium atmosphere to identify teams.
+- Use real team names, kit colors, recognizable patterns, flags, player roles, body language, hairstyles, and stadium atmosphere to identify teams. For real players, prompt for manga likeness through silhouette, posture, hair, and role rather than demanding photoreal portrait accuracy.
 - Ask for clean, legible Chinese captions and no extra text. When final text must be accurate, ask for clean caption boxes and plan to overlay text later.
 - For the default style, use "black-and-white Japanese football documentary manga", "non-uniform panel layout", "high contrast ink linework", "screentone shadows", and "speed lines".
 - Add brightness constraints for black-and-white manga pages: "bright white paper background", "mostly white panels", "light-to-moderate screentone", "no full black background", "no dark page wash", and "keep all panels bright and readable".

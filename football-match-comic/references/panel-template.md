@@ -30,7 +30,7 @@
 视觉钩子：<奖杯/点球点/横梁/球飞向夜空/双人对峙/比分牌碎片>
 主体构图：<单张海报构图，不做多分镜叙事>
 文字约束：<标题大、字少、缩略图可读>
-禁用元素：官方队徽、赛事 logo、赞助商、水印、密集小字
+避免元素：赞助商 logo、水印、官方赛事 logo、密集小字；非商业纪录/同人漫画可使用真实球队视觉识别、球衣颜色、旗帜、球员漫画化特征
 ```
 
 ## Page Plan
@@ -96,11 +96,11 @@ Asset type: vertical cover poster for Xiaohongshu, Douyin, and WeChat publishing
 Primary request: Create a cover image for a football manga recap of <match>.
 Aspect ratio: 3:4 or 9:16 vertical; keep important text and faces in the safe center area.
 Visual hook: <one strong symbolic composition, such as player duel, penalty spot, crossbar, trophy silhouette, stadium lights, or ball flying into night sky>.
-Teams: Use generic kits, no official logos.
+Teams: Use real team names and recognizable national-team kit colors, patterns, flags, and player silhouettes. For real players, use manga likeness through hairstyle, posture, role, and body language rather than photoreal portrait copying.
 Style/medium: dramatic sports manga cover poster, high contrast, clean thumbnail readability, bold title typography.
 Text (verbatim): "<short title>"; "<optional short subtitle>"
 Composition/framing: single poster composition, not a manga page, not multiple story panels; large title, strong central subject, minimal text, readable at phone thumbnail size.
-Constraints: no extra text, no official crests, no tournament logo, no sponsor marks, no watermarks.
+Constraints: no extra text, avoid sponsor logos, watermarks, and official tournament logo marks unless licensed assets are provided.
 ```
 
 ## Manga Page Prompt Skeleton
@@ -111,9 +111,9 @@ Asset type: Japanese sports manga page <page X of Y>
 Primary request: Create page <X> of a <1/2/3>-page football comic recap of <match>.
 Facts to depict on this page: <confirmed events only>.
 Scene/backdrop: <stadium, time, atmosphere>.
-Teams: Use generic kits, no official logos.
+Teams: Use real team names and recognizable national-team kit colors, patterns, flags, and player silhouettes. For real players, use manga likeness through hairstyle, posture, role, and body language rather than photoreal portrait copying.
 Style/medium: black-and-white Japanese football manga, non-uniform sports manga page layout, sharp ink linework, screentone shadows, speed lines, dramatic close-ups, open-pitch negative space.
 Composition/framing: this image is a complete manga page with multiple panels, not a single-scene illustration; avoid standard four-panel or six-panel grid; use one oversized main action panel, narrow reaction panels, close-up insert panels, diagonal motion panels, clear reading order, thick expressive borders.
 Text (verbatim): "<only exact captions, dialogue, or sound effects>"
-Constraints: no extra text, no official crests, no watermarks, no invented events, do not overcrowd the page.
+Constraints: no extra text, avoid sponsor logos, watermarks, and official tournament logo marks unless licensed assets are provided; no invented events, do not overcrowd the page.
 ```
