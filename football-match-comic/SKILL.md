@@ -29,7 +29,7 @@ Use when the user provides a tournament event point, such as "World Cup teams be
 
 ## Core Workflow
 
-Default to staged execution unless the user explicitly asks for a fast one-pass output. Do not jump from fact research directly to storyboard and prompts when the user has not opted out of the supplement checkpoint.
+Default to staged execution unless the user explicitly asks for a fast one-pass output. Do not jump from fact research directly to storyboard and prompts when the user has not opted out of the supplement checkpoint or the pre-script adjustment checkpoint.
 
 1. Identify the mode: single match recap or tournament serial event.
 2. Use a dual-source research strategy: official sources establish facts; broader internet and Chinese media/platform sources surface visual, emotional, and public-discussion material. Do not let non-authoritative sources override official facts.
@@ -44,10 +44,11 @@ Default to staged execution unless the user explicitly asks for a fast one-pass 
 11. Build a story spine before page planning: protagonist pressure, dramatic question, suspense engine, turning-point staging, and aftertaste. Do not proceed if the spine only restates the match chronology.
 12. Turn facts, selected material, and the story spine into an outline with a beginning, escalation, turning point, decisive moment, and aftertaste. Avoid news-feed summaries.
 13. Choose page count by dramatic function before writing panels. Do not force too many beats into one page.
-14. Write in Chinese by default unless the user requests another language.
-15. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
-16. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
-17. If generating images for non-commercial documentary/fan manga, preserve real football identity: national-team kit colors, recognizable patterns, player roles, hairstyles, posture, and known football body language are encouraged. Avoid sponsor logos, watermarks, and official tournament logo marks unless the user provides licensed assets or explicitly asks for them.
+14. Stop before writing the final comic script and ask the user whether the story spine, selected materials, page count, page plan, tone, or visual focus should be adjusted. Include a concise recommendation and the tradeoffs of any obvious alternatives. Wait for the user's confirmation or requested changes before continuing, unless the user explicitly requested a fast one-pass output.
+15. After the user confirms or adjusts the pre-script plan, write in Chinese by default unless the user requests another language.
+16. Keep captions short and image-friendly. Preserve identity anchors: teams, key people, minute, score, and result when they matter.
+17. Run a director pass after drafting the script and revise any page that reads like a match report instead of a staged manga sequence.
+18. If generating images for non-commercial documentary/fan manga, preserve real football identity: national-team kit colors, recognizable patterns, player roles, hairstyles, posture, and known football body language are encouraged. Avoid sponsor logos, watermarks, and official tournament logo marks unless the user provides licensed assets or explicitly asks for them.
 
 ## Research Granularity
 
@@ -106,7 +107,7 @@ Treat China platform findings as material leads unless they come from verified o
 
 ## Story Spine and Director Pass
 
-Never write the final comic script immediately after fact extraction. Always produce a story spine first, then draft the script, then run a director pass before prompts.
+Never write the final comic script immediately after fact extraction. Always produce a story spine first, then a pre-script plan and adjustment checkpoint, then draft the script, then run a director pass before prompts.
 
 The story spine must answer:
 
@@ -125,6 +126,20 @@ The director pass must check:
 - Page purpose: each page must have a dramatic job, not just a list of events.
 
 Revise before producing prompts if the script lacks suspense, reaction shots, page-level dramatic purpose, or visual rhythm.
+
+## Pre-Script Adjustment Checkpoint
+
+Before writing the final comic script, pause and ask the user to confirm or adjust the manga plan. This checkpoint is mandatory in staged execution after the material pool, selected materials, story spine, story outline, page-count judgment, and page plan are ready.
+
+The checkpoint should include:
+
+- Recommended page count and why it fits the dramatic function.
+- A concise page-by-page plan with each page's dramatic job.
+- The strongest recommended visual/emotional focus.
+- Any risky compression, missing material, or optional alternative structure.
+- A direct question asking whether to keep the plan or adjust page count, protagonist focus, tone, visual emphasis, or selected materials.
+
+Do not include the final comic script, director pass, or image prompts until the user confirms or requests changes. If the user confirms without changes, continue from the confirmed plan. If the user requests changes, revise the plan first and ask for confirmation again when the changes materially alter the story structure.
 
 ## Output Shape
 
@@ -146,6 +161,10 @@ After the user answers the supplement checkpoint, continue with:
 - Story outline: the distilled dramatic arc.
 - Page-count judgment: explain why the event needs 1 page, 2-3 pages, 4-5 pages, or a split episode.
 - Page plan: each page title, dramatic purpose, and covered beats.
+- Pre-script adjustment checkpoint: ask whether the user wants to keep or adjust the story spine, selected materials, page count, page plan, tone, visual focus, or protagonist focus before the final script.
+
+After the user confirms or adjusts the pre-script plan, continue with:
+
 - Comic script: page number, panel role, scene, action, caption/dialogue, visual emphasis, and reading order.
 - Director pass: note how the script uses camera placement, waiting, reaction shots, and delayed decisive action; revise weak pages before prompts.
 - Image prompt: one prompt per manga page by default. Include cover prompts only for chapter covers, major events, social cover requests, or final collections.
