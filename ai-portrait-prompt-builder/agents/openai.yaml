@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI写真提示词生成器"
+  short_description: "根据参考图提炼AI写真统一视觉要求、镜头内容和负面要求。"
+  default_prompt: "Use $ai-portrait-prompt-builder to turn my reference images into a structured AI portrait prompt set."
+
+policy:
+  allow_implicit_invocation: true
